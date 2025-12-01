@@ -1,86 +1,53 @@
-import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import "./Navbar.css";
-
-// KORREKTER IMPORT
-import heroLogo from "../assets/hero.jpg";
+import { Link, NavLink } from "react-router-dom";
+import heroLogo from "../assets/hero.jpg";   // ← korrekt importiert
+import "./navbar.css";
 
 export default function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      if (window.scrollY > 80) setScrolled(true);
+      else setScrolled(false);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    setIsMenuOpen(false);
-  }, [location]);
-
   return (
-    <nav className={`nav ${isScrolled ? "scrolled" : ""}`}>
+    <nav className={`nav ${scrolled ? "scrolled" : ""}`}>
       <div className="logo">
         <Link to="/">
-          <img
-            src={heroLogo}
-            alt="MS Gebäudeservice Logo"
-            style={{ width: "160px", height: "auto" }} // 2,5× größer
-          />
+          <img src={heroLogo} alt="MS Gebäudeservice Logo" />
         </Link>
+        <span className="logo-text">MS Gebäudeservice</span>
       </div>
 
       <button
-        className={`menu-toggle ${isMenuOpen ? "active" : ""}`}
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-        aria-label="Toggle menu"
+        className={`menu-toggle ${menuOpen ? "active" : ""}`}
+        onClick={() => setMenuOpen(!menuOpen)}
       >
         <span></span>
         <span></span>
         <span></span>
       </button>
 
-      <ul className={`links ${isMenuOpen ? "active" : ""}`}>
+      <ul className={`links ${menuOpen ? "active" : ""}`}>
         <li>
-          <Link
-            to="/"
-            className={location.pathname === "/" ? "active" : ""}
-          >
-            Start
-          </Link>
+          <NavLink to="/">Start</NavLink>
         </li>
         <li>
-          <Link
-            to="/leistungen"
-            className={location.pathname === "/leistungen" ? "active" : ""}
-          >
-            Leistungen
-          </Link>
+          <NavLink to="/leistungen">Leistungen</NavLink>
         </li>
         <li>
-          <Link
-            to="/info"
-            className={location.pathname === "/info" ? "active" : ""}
-          >
-            Über uns
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/kontakt"
-            className={location.pathname === "/kontakt" ? "active" : ""}
-          >
-            Kontakt
-          </Link>
+          <NavLink to="/ueber-uns">Über uns</NavLink>
         </li>
         <li>
           <a href="tel:+4915227760952" className="contact-btn">
-            📞 +49 152 27760952
+            📞 +49 1522 7760952
           </a>
         </li>
       </ul>
