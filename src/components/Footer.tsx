@@ -8,15 +8,35 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section">
-          <h3>MS Hausmeisterservice</h3>
+          <h3>MS Gebäudeservice</h3>
           <p>
             Ihr zuverlässiger Partner für professionelle Immobilienbetreuung 
-            in Reutlingen und Umgebung.
+            im Umkreis von 50 km um Kupferzell.
           </p>
           <div className="social-links">
-            <a href="#" aria-label="Facebook">📘</a>
-            <a href="#" aria-label="Instagram">📷</a>
-            <a href="#" aria-label="LinkedIn">💼</a>
+            <a 
+              href="https://www.instagram.com/ms_gebaudeservice/" 
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              title="Folgen Sie uns auf Instagram"
+            >
+              📷
+            </a>
+            <a 
+              href="tel:+4915227760952" 
+              aria-label="Telefon"
+              title="Rufen Sie uns an"
+            >
+              📞
+            </a>
+            <a 
+              href="mailto:kontakt@msgebaeudeservice.com" 
+              aria-label="E-Mail"
+              title="Schreiben Sie uns eine E-Mail"
+            >
+              ✉️
+            </a>
           </div>
         </div>
 
@@ -33,30 +53,30 @@ export default function Footer() {
         <div className="footer-section">
           <h3>Kontakt</h3>
           <p>
-            MS Hausmeisterservice<br />
-            Musterstraße 123<br />
-            72764 Reutlingen<br /><br />
-            Tel: <a href="tel:+4971234567890">+49 (0) 7123 456 7890</a><br />
-            E-Mail: <a href="mailto:info@ms-hausmeisterservice.de">
-              info@ms-hausmeisterservice.de
+            MS Gebäudeservice<br />
+            Servicegebiet: 50 km um Kupferzell<br />
+            Baden-Württemberg<br /><br />
+            Tel: <a href="tel:+4915227760952">+49 152 27760952</a><br />
+            E-Mail: <a href="mailto:kontakt@msgebaeudeservice.com">
+              kontakt@msgebaeudeservice.com
             </a>
           </p>
         </div>
 
         <div className="footer-section">
-          <h3>Öffnungszeiten</h3>
+          <h3>Erreichbarkeit</h3>
           <p>
-            Montag - Freitag: 8:00 - 18:00<br />
-            Samstag: 9:00 - 14:00<br />
-            Sonntag: geschlossen<br /><br />
-            <strong>Notdienst: 24/7</strong>
+            Montag - Freitag: 7:00 - 18:00<br />
+            Samstag: 8:00 - 14:00<br />
+            Sonntag: Nach Vereinbarung<br /><br />
+            <strong>Notdienst verfügbar</strong>
           </p>
         </div>
       </div>
 
       <div className="footer-bottom">
         <p>
-          © {currentYear} MS Hausmeisterservice. Alle Rechte vorbehalten. | 
+          © {currentYear} MS Gebäudeservice. Alle Rechte vorbehalten. | 
           <Link to="/impressum" style={{ marginLeft: '1rem' }}>Impressum</Link> | 
           <Link to="/datenschutz" style={{ marginLeft: '1rem' }}>Datenschutz</Link>
         </p>

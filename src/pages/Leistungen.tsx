@@ -1,7 +1,6 @@
 import { motion, easeOut } from "framer-motion";
-import type { Variants } from "framer-motion"; // <- type-only import
+import type { Variants } from "framer-motion";
 import PageWrapper from "../components/PageWrapper";
-
 
 export default function Leistungen() {
   const services = [
@@ -51,7 +50,7 @@ export default function Leistungen() {
       title: "Wartung & Instandhaltung",
       description: "Vorbeugende Pflege für langfristige Werterhaltung",
       image: "/placeholder-service4.jpg",
-      fallback: "https://images.unsplash.com/photo-1483664852095-d6cc6870702d?w=800&q=80",
+      fallback: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&q=80",
       details: [
         "Regelmäßige Anlagenkontrollen",
         "Austausch defekter Komponenten",
@@ -79,7 +78,7 @@ export default function Leistungen() {
       title: "Reinigungsservice",
       description: "Sauberkeit für Ihr Objekt",
       image: "/placeholder-service2.jpg",
-      fallback: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80",
+      fallback: "https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=800&q=80",
       details: [
         "Treppenhausreinigung",
         "Fensterreinigung",
@@ -151,7 +150,7 @@ export default function Leistungen() {
               />
               <div className="service-card-content">
                 <h3>{service.title}</h3>
-                <p style={{ marginBottom: '1.5rem', fontWeight: 600 }}>
+                <p style={{ marginBottom: '1.5rem', fontWeight: 600, color: '#2563eb' }}>
                   {service.description}
                 </p>
                 <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.7rem' }}>
@@ -189,7 +188,9 @@ export default function Leistungen() {
             maxWidth: '700px',
             margin: '0 auto 2rem'
           }}>
-            Sie benötigen eine individuelle Kombination unserer Services? Kein Problem! Wir erstellen Ihnen gerne ein maßgeschneidertes Angebot.
+            Sie benötigen eine individuelle Kombination unserer Services? Kein Problem! 
+            Wir erstellen Ihnen gerne ein maßgeschneidertes Angebot für Ihr Objekt 
+            im Umkreis von 50 km um Kupferzell.
           </p>
           <a href="/kontakt" className="btn primary">
             Jetzt anfragen

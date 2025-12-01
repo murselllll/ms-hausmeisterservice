@@ -27,9 +27,9 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <h1>Ihr zuverlässiger Hausmeisterservice in Reutlingen</h1>
+          <h1>Professioneller Hausmeisterservice im Raum Kupferzell</h1>
           <p>
-            Professionelle Betreuung von Wohn- und Gewerbeimmobilien. 
+            Zuverlässige Betreuung von Wohn- und Gewerbeimmobilien. 
             Wir kümmern uns um alles – damit Sie sich zurücklehnen können.
           </p>
           <div className="hero-buttons">
@@ -141,7 +141,7 @@ export default function Home() {
         variants={staggerContainer}
       >
         <motion.h2 className="section-title" variants={fadeInUp}>
-          Warum MS Hausmeisterservice?
+          Warum MS Gebäudeservice?
         </motion.h2>
         <motion.p className="section-subtitle" variants={fadeInUp}>
           Wir sind Ihr verlässlicher Partner für die professionelle Betreuung 

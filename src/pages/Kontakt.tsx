@@ -12,7 +12,19 @@ export default function Kontakt() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert(`Vielen Dank für Ihre Nachricht, ${formData.name}! Wir melden uns zeitnah bei Ihnen.`);
+    
+    // E-Mail-Link mit vorausgefüllten Daten
+    const subject = encodeURIComponent(`Anfrage von ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\n` +
+      `E-Mail: ${formData.email}\n` +
+      `Telefon: ${formData.phone}\n\n` +
+      `Nachricht:\n${formData.message}`
+    );
+    
+    window.location.href = `mailto:kontakt@msgebaeudeservice.com?subject=${subject}&body=${body}`;
+    
+    alert(`Vielen Dank für Ihre Nachricht, ${formData.name}! Ihr E-Mail-Programm wird geöffnet.`);
     setFormData({ name: '', email: '', phone: '', message: '' });
   };
 
@@ -58,7 +70,7 @@ export default function Kontakt() {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <div style={{
-              background: 'linear-gradient(135deg, var(--primary-blue), var(--primary-dark))',
+              background: 'linear-gradient(135deg, #2563eb, #1e40af)',
               padding: '3rem 2.5rem',
               borderRadius: '16px',
               color: 'white',
@@ -85,16 +97,16 @@ export default function Kontakt() {
                     marginBottom: '0.7rem'
                   }}>
                     <span style={{ fontSize: '1.5rem' }}>📍</span>
-                    <h3 style={{ fontSize: '1.2rem', margin: 0 }}>Adresse</h3>
+                    <h3 style={{ fontSize: '1.2rem', margin: 0 }}>Servicegebiet</h3>
                   </div>
                   <p style={{ 
                     marginLeft: '2.5rem',
                     opacity: 0.95,
                     lineHeight: '1.6'
                   }}>
-                    MS Hausmeisterservice<br />
-                    Musterstraße 123<br />
-                    72764 Reutlingen
+                    MS Gebäudeservice<br />
+                    Im Umkreis von 50 km um Kupferzell<br />
+                    Baden-Württemberg
                   </p>
                 </div>
 
@@ -110,17 +122,20 @@ export default function Kontakt() {
                   </div>
                   <p style={{ 
                     marginLeft: '2.5rem',
-                    opacity: 0.95
+                    opacity: 0.95,
+                    fontSize: '1.1rem',
+                    fontWeight: 600
                   }}>
                     <a 
-                      href="tel:+4971234567890" 
+                      href="tel:+4915227760952" 
                       style={{ 
                         color: 'white',
                         textDecoration: 'none',
-                        borderBottom: '1px solid rgba(255,255,255,0.5)'
+                        borderBottom: '2px solid rgba(255,255,255,0.5)',
+                        paddingBottom: '2px'
                       }}
                     >
-                      +49 (0) 7123 456 7890
+                      +49 152 27760952
                     </a>
                   </p>
                 </div>
@@ -140,14 +155,47 @@ export default function Kontakt() {
                     opacity: 0.95
                   }}>
                     <a 
-                      href="mailto:info@ms-hausmeisterservice.de" 
+                      href="mailto:kontakt@msgebaeudeservice.com" 
                       style={{ 
                         color: 'white',
                         textDecoration: 'none',
                         borderBottom: '1px solid rgba(255,255,255,0.5)'
                       }}
                     >
-                      info@ms-hausmeisterservice.de
+                      kontakt@msgebaeudeservice.com
+                    </a>
+                  </p>
+                </div>
+
+                <div>
+                  <div style={{ 
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '1rem',
+                    marginBottom: '0.7rem'
+                  }}>
+                    <span style={{ fontSize: '1.5rem' }}>📷</span>
+                    <h3 style={{ fontSize: '1.2rem', margin: 0 }}>Instagram</h3>
+                  </div>
+                  <p style={{ 
+                    marginLeft: '2.5rem',
+                    opacity: 0.95
+                  }}>
+                    <a 
+                      href="https://www.instagram.com/ms_gebaudeservice/" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ 
+                        color: 'white',
+                        textDecoration: 'none',
+                        borderBottom: '1px solid rgba(255,255,255,0.5)',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.5rem'
+                      }}
+                    >
+                      @ms_gebaudeservice
+                      <span style={{ fontSize: '0.9rem' }}>↗</span>
                     </a>
                   </p>
                 </div>
@@ -160,16 +208,16 @@ export default function Kontakt() {
                     marginBottom: '0.7rem'
                   }}>
                     <span style={{ fontSize: '1.5rem' }}>🕐</span>
-                    <h3 style={{ fontSize: '1.2rem', margin: 0 }}>Öffnungszeiten</h3>
+                    <h3 style={{ fontSize: '1.2rem', margin: 0 }}>Erreichbarkeit</h3>
                   </div>
                   <p style={{ 
                     marginLeft: '2.5rem',
                     opacity: 0.95,
                     lineHeight: '1.8'
                   }}>
-                    Montag - Freitag: 8:00 - 18:00 Uhr<br />
-                    Samstag: 9:00 - 14:00 Uhr<br />
-                    Notdienst: 24/7 erreichbar
+                    Montag - Freitag: 7:00 - 18:00 Uhr<br />
+                    Samstag: 8:00 - 14:00 Uhr<br />
+                    Notdienst: Nach Vereinbarung
                   </p>
                 </div>
               </div>
@@ -253,11 +301,53 @@ export default function Kontakt() {
           </motion.div>
         </div>
 
-        {/* Additional Info */}
+        {/* Google Maps Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
+          style={{
+            marginTop: '4rem',
+            maxWidth: '1100px',
+            margin: '4rem auto 0'
+          }}
+        >
+          <h2 style={{ 
+            fontSize: '2rem',
+            marginBottom: '1.5rem',
+            color: 'var(--text-dark)',
+            textAlign: 'center'
+          }}>
+            Unser Servicegebiet
+          </h2>
+          <p style={{ 
+            fontSize: '1.1rem',
+            color: 'var(--text-gray)',
+            textAlign: 'center',
+            marginBottom: '2rem',
+            lineHeight: '1.7'
+          }}>
+            Wir betreuen Immobilien im Umkreis von 50 km um Kupferzell
+          </p>
+          <div className="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d162656.9883907!2d9.438!3d49.258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4797c4e5e5e5e5e5%3A0x0!2sKupferzell!5e0!3m2!1sde!2sde!4v1234567890!5m2!1sde!2sde&z=9"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Servicegebiet Kupferzell"
+            />
+          </div>
+        </motion.div>
+
+        {/* Additional Info */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
           style={{
             marginTop: '4rem',
             padding: '2.5rem',
@@ -281,7 +371,7 @@ export default function Kontakt() {
             lineHeight: '1.7'
           }}>
             Wir antworten in der Regel innerhalb von 24 Stunden auf Ihre Anfrage. 
-            Bei dringenden Anliegen erreichen Sie uns jederzeit telefonisch.
+            Bei dringenden Anliegen erreichen Sie uns jederzeit unter <strong>+49 152 27760952</strong>.
           </p>
         </motion.div>
       </section>

@@ -11,7 +11,7 @@ export default function Info() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Über MS Hausmeisterservice
+          Über MS Gebäudeservice
         </motion.h1>
 
         <motion.div
@@ -34,7 +34,7 @@ export default function Info() {
             <h2 style={{ 
               fontSize: '2rem',
               marginBottom: '1.5rem',
-              color: 'var(--primary-blue)'
+              color: '#2563eb'
             }}>
               Ihr Partner für professionelle Immobilienbetreuung
             </h2>
@@ -43,10 +43,10 @@ export default function Info() {
               color: 'var(--text-gray)',
               marginBottom: '1.5rem'
             }}>
-              Seit vielen Jahren betreuen wir mit Leidenschaft und Fachkompetenz 
-              Wohn- und Gewerbeimmobilien in Reutlingen und Umgebung. Unser Team 
-              besteht aus erfahrenen Fachkräften, die mit modernster Ausstattung 
-              und fundiertem Know-how für Sie im Einsatz sind.
+              MS Gebäudeservice steht für zuverlässige und professionelle Betreuung 
+              von Wohn- und Gewerbeimmobilien im Umkreis von 50 km um Kupferzell. 
+              Mit Leidenschaft und Fachkompetenz kümmern wir uns um alle Aspekte 
+              der Gebäudepflege und -instandhaltung.
             </p>
             <p style={{ 
               fontSize: '1.1rem',
@@ -79,17 +79,17 @@ export default function Info() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}
               style={{
-                background: 'linear-gradient(135deg, var(--primary-blue), var(--primary-dark))',
+                background: 'linear-gradient(135deg, #2563eb, #1e40af)',
                 padding: '2.5rem 2rem',
                 borderRadius: '12px',
                 color: 'white',
                 textAlign: 'center'
               }}
             >
-              <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>15+</div>
-              <h3 style={{ fontSize: '1.3rem', marginBottom: '0.5rem' }}>Jahre Erfahrung</h3>
+              <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>50km</div>
+              <h3 style={{ fontSize: '1.3rem', marginBottom: '0.5rem' }}>Servicegebiet</h3>
               <p style={{ fontSize: '0.95rem', opacity: 0.9 }}>
-                im Hausmeisterservice
+                rund um Kupferzell
               </p>
             </motion.div>
 
@@ -98,17 +98,17 @@ export default function Info() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.5 }}
               style={{
-                background: 'linear-gradient(135deg, var(--accent-orange), #ff5722)',
+                background: 'linear-gradient(135deg, #f97316, #ea580c)',
                 padding: '2.5rem 2rem',
                 borderRadius: '12px',
                 color: 'white',
                 textAlign: 'center'
               }}
             >
-              <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>200+</div>
-              <h3 style={{ fontSize: '1.3rem', marginBottom: '0.5rem' }}>Zufriedene Kunden</h3>
+              <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>100%</div>
+              <h3 style={{ fontSize: '1.3rem', marginBottom: '0.5rem' }}>Zuverlässigkeit</h3>
               <p style={{ fontSize: '0.95rem', opacity: 0.9 }}>
-                vertrauen auf uns
+                auf uns ist Verlass
               </p>
             </motion.div>
 
@@ -117,7 +117,7 @@ export default function Info() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.6 }}
               style={{
-                background: 'linear-gradient(135deg, #28a745, #218838)',
+                background: 'linear-gradient(135deg, #6366f1, #4f46e5)',
                 padding: '2.5rem 2rem',
                 borderRadius: '12px',
                 color: 'white',
@@ -125,9 +125,9 @@ export default function Info() {
               }}
             >
               <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>24/7</div>
-              <h3 style={{ fontSize: '1.3rem', marginBottom: '0.5rem' }}>Erreichbarkeit</h3>
+              <h3 style={{ fontSize: '1.3rem', marginBottom: '0.5rem' }}>Erreichbar</h3>
               <p style={{ fontSize: '0.95rem', opacity: 0.9 }}>
-                für Notfälle
+                bei Notfällen
               </p>
             </motion.div>
           </div>
@@ -167,7 +167,7 @@ export default function Info() {
                   <h3 style={{ 
                     fontSize: '1.3rem', 
                     marginBottom: '0.7rem',
-                    color: 'var(--primary-blue)'
+                    color: '#2563eb'
                   }}>
                     {value.title}
                   </h3>
@@ -189,7 +189,7 @@ export default function Info() {
             style={{ 
               textAlign: 'center',
               padding: '3rem 2rem',
-              background: 'linear-gradient(135deg, var(--primary-blue), var(--primary-dark))',
+              background: 'linear-gradient(135deg, #2563eb, #1e40af)',
               borderRadius: '16px',
               color: 'white'
             }}
@@ -208,11 +208,22 @@ export default function Info() {
               margin: '0 auto 2rem'
             }}>
               Lernen Sie uns kennen und überzeugen Sie sich selbst von unserem Service. 
-              Wir freuen uns auf Ihre Anfrage!
+              Rufen Sie uns an unter <strong>+49 152 27760952</strong> oder kontaktieren 
+              Sie uns über unser Kontaktformular.
             </p>
-            <a href="/kontakt" className="btn primary">
-              Jetzt Kontakt aufnehmen
-            </a>
+            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+              <a href="/kontakt" className="btn primary">
+                Jetzt Kontakt aufnehmen
+              </a>
+              <a 
+                href="https://www.instagram.com/ms_gebaudeservice/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn secondary"
+              >
+                📷 Instagram besuchen
+              </a>
+            </div>
           </motion.div>
         </motion.div>
       </section>
