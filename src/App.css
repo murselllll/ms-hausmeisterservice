@@ -1,5 +1,172 @@
+/* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ROOT & BODY */
+:root {
+  font-family: "Poppins", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color-scheme: light dark;
+  --primary-color: #646cff;
+  --accent-color: #82aaff;
+  --bg-dark: #1a1a1a;
+  --bg-darker: #0e0e0e;
+  --text-light: #ccc;
+}
+
+body {
+  background: var(--bg-darker);
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  color: var(--text-light);
+}
+
+/* CONTENT */
 .content {
   width: min(1200px, 95%);
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 3rem 0 6rem 0;
+}
+
+/* HERO */
+.home-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Volle Höhe */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background-image: url('../assets/home.jpg'); /* Dein Hausbild */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.home-hero img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4); /* dunkler Overlay für Text-Lesbarkeit */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* Text über Overlay */
+  max-width: 800px;
+  padding: 0 1rem;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  color: #eee;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn.primary {
+  background-color: #646cff;
+  color: white;
+}
+
+.btn.primary:hover {
+  background-color: #5058e0;
+}
+
+.btn.secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid #646cff;
+}
+
+.btn.secondary:hover {
+  background-color: #646cff;
+  color: white;
+}
+
+/* HOME SECTIONS */
+.home-section {
+  padding: 4rem 1rem;
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.home-section h2 {
+  color: var(--primary-color);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.home-section p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--text-light);
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #111;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  border: 2px solid #111;
+}
+@media (max-width: 768px) {
+  .home-hero {
+    height: auto;
+    padding: 4rem 1rem;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
 }

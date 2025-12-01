@@ -1,17 +1,17 @@
 import PageWrapper from "../components/PageWrapper";
-import hero from "../assets/hero.jpg";
 
 export default function Home() {
   return (
-    <PageWrapper>
-      <div className="hero-container">
-        <img src={hero} className="hero-img" alt="Hero" />
-
-        <div className="hero-text">
-          <h1>Ihr moderner Hausmeisterservice</h1>
-          <p>Professionell – zuverlässig – kompetent.</p>
+    <div className="home-hero">
+      <div className="hero-overlay"></div>
+      <div className="hero-content">
+        <h1>Ihr Hausmeisterservice in [Ort]</h1>
+        <p>Professionell, zuverlässig und günstig – wir kümmern uns um alles rund ums Haus.</p>
+        <div className="hero-buttons">
+          <a href="#services" className="btn primary">Unsere Services</a>
+          <a href="#contact" className="btn secondary">Kostenlose Anfrage</a>
         </div>
       </div>
-    </PageWrapper>
+    </div>
   );
 }

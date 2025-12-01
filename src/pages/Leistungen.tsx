@@ -12,25 +12,25 @@ export default function Leistungen() {
       <div className="service-grid">
 
         <div className="service-card">
-          <img src={s1} />
+          <img src={s1} alt="Hausmeisterservice" loading="lazy" />
           <h2>Hausmeisterservice</h2>
           <p>Objektkontrollen, Reinigung, Reparaturen, Winterdienst, Mülltonnen-Management.</p>
         </div>
 
         <div className="service-card">
-          <img src={s2} />
+          <img src={s2} alt="Grün- & Außenanlagen" loading="lazy" />
           <h2>Grün- & Außenanlagen</h2>
           <p>Rasen mähen, Heckenpflege, Unkrautentfernung, Laubarbeiten, Wegepflege.</p>
         </div>
 
         <div className="service-card">
-          <img src={s3} />
+          <img src={s3} alt="Montagearbeiten" loading="lazy" />
           <h2>Montagearbeiten</h2>
           <p>Möbelmontage, Regale, Küchenmodule, Reparaturen, Demontage.</p>
         </div>
 
         <div className="service-card">
-          <img src={s4} />
+          <img src={s4} alt="Wartung & Instandhaltung" loading="lazy" />
           <h2>Wartung & Instandhaltung</h2>
           <p>Anlagenkontrollen, Austausch defekter Teile, Diagnose, vorbeugende Wartung.</p>
         </div>
