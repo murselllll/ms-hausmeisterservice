@@ -63,11 +63,9 @@ export default function Home() {
         <div className="service-grid">
           <motion.div className="service-card" variants={fadeInUp}>
             <img 
-              src="/placeholder-service1.jpg" 
+              src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80" 
               alt="Hausmeisterservice" 
-              onError={(e) => {
-                e.currentTarget.src = 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80';
-              }}
+              loading="lazy"
             />
             <div className="service-card-content">
               <h3>Hausmeisterservice</h3>
@@ -80,11 +78,9 @@ export default function Home() {
 
           <motion.div className="service-card" variants={fadeInUp}>
             <img 
-              src="/placeholder-service2.jpg" 
+              src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=800&q=80" 
               alt="Grünanlagen" 
-              onError={(e) => {
-                e.currentTarget.src = 'https://images.unsplash.com/photo-1558904541-efa843a96f01?w=800&q=80';
-              }}
+              loading="lazy"
             />
             <div className="service-card-content">
               <h3>Grün- & Außenanlagen</h3>
@@ -97,11 +93,9 @@ export default function Home() {
 
           <motion.div className="service-card" variants={fadeInUp}>
             <img 
-              src="/placeholder-service3.jpg" 
+              src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&q=80" 
               alt="Montagearbeiten" 
-              onError={(e) => {
-                e.currentTarget.src = 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&q=80';
-              }}
+              loading="lazy"
             />
             <div className="service-card-content">
               <h3>Montagearbeiten</h3>
@@ -114,17 +108,15 @@ export default function Home() {
 
           <motion.div className="service-card" variants={fadeInUp}>
             <img 
-              src="/placeholder-service4.jpg" 
-              alt="Winterdienst" 
-              onError={(e) => {
-                e.currentTarget.src = 'https://images.unsplash.com/photo-1483664852095-d6cc6870702d?w=800&q=80';
-              }}
+              src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&q=80" 
+              alt="Wartung & Instandhaltung" 
+              loading="lazy"
             />
             <div className="service-card-content">
-              <h3>Winterdienst</h3>
+              <h3>Wartung & Instandhaltung</h3>
               <p>
-                Schneeräumung und Streudienst für sichere Wege und Zufahrten – 
-                auch bei Schnee und Eis sind wir für Sie da.
+                Regelmäßige Wartung und Instandhaltung – 
+                damit Ihr Objekt stets funktionsfähig und gepflegt bleibt.
               </p>
             </div>
           </motion.div>

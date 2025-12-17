@@ -4,16 +4,72 @@ import PageWrapper from "../components/PageWrapper";
 export default function Info() {
   return (
     <PageWrapper>
-      <section className="section">
-        <motion.h1 
-          className="section-title"
-          initial={{ opacity: 0, y: -20 }}
+      {/* Hero Section mit Bild */}
+      <div style={{
+        position: 'relative',
+        width: '100%',
+        height: '60vh',
+        minHeight: '400px',
+        marginTop: '80px',
+        overflow: 'hidden'
+      }}>
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          backgroundImage: 'url(https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&q=80)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          filter: 'brightness(0.6)'
+        }}></div>
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          background: 'linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.2))'
+        }}></div>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8 }}
+          style={{
+            position: 'relative',
+            height: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            color: 'white',
+            textAlign: 'center',
+            padding: '0 2rem',
+            zIndex: 2
+          }}
         >
-          Über MS Gebäudeservice
-        </motion.h1>
+          <h1 style={{
+            fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+            fontWeight: 800,
+            marginBottom: '1rem',
+            color: 'white',
+            textShadow: '0 4px 12px rgba(0,0,0,0.4)'
+          }}>
+            Über MS Gebäudeservice
+          </h1>
+          <p style={{
+            fontSize: 'clamp(1.1rem, 2.5vw, 1.5rem)',
+            maxWidth: '700px',
+            opacity: 0.95,
+            textShadow: '0 2px 8px rgba(0,0,0,0.3)'
+          }}>
+            Ihr zuverlässiger Partner für professionelle Immobilienbetreuung im Raum Kupferzell
+          </p>
+        </motion.div>
+      </div>
 
+      <section className="section">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
