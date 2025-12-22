@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import heroLogo from "../assets/hero.jpg";
-import "./Navbar.css";  // ← Korrektur: Großbuchstabe
+import "./Navbar.css";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -9,9 +9,16 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 80) setScrolled(true);
-      else setScrolled(false);
+      // Navbar wird nach 50px Scrollen eingefärbt
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
     };
+
+    // Initial check
+    handleScroll();
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -20,19 +27,31 @@ export default function Navbar() {
   // Schließe Menü beim Klick auf einen Link
   const closeMenu = () => setMenuOpen(false);
 
+  // Verhindere Scrollen wenn Mobile-Menü offen ist
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [menuOpen]);
+
   return (
     <nav className={`nav ${scrolled ? "scrolled" : ""}`}>
-      <div className="logo">
-        <Link to="/" onClick={closeMenu}>
-          <img src={heroLogo} alt="MS Gebäudeservice Logo" />
-        </Link>
+      <Link to="/" onClick={closeMenu} className="logo">
+        <img src={heroLogo} alt="MS Gebäudeservice Logo" />
         <span className="logo-text">MS Gebäudeservice</span>
-      </div>
+      </Link>
 
       <button
         className={`menu-toggle ${menuOpen ? "active" : ""}`}
         onClick={() => setMenuOpen(!menuOpen)}
         aria-label="Menü öffnen/schließen"
+        aria-expanded={menuOpen}
       >
         <span></span>
         <span></span>
@@ -41,17 +60,39 @@ export default function Navbar() {
 
       <ul className={`links ${menuOpen ? "active" : ""}`}>
         <li>
-          <NavLink to="/" onClick={closeMenu}>Start</NavLink>
+          <NavLink 
+            to="/" 
+            onClick={closeMenu}
+            className={({ isActive }) => isActive ? "active" : ""}
+          >
+            Start
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/leistungen" onClick={closeMenu}>Leistungen</NavLink>
+          <NavLink 
+            to="/leistungen" 
+            onClick={closeMenu}
+            className={({ isActive }) => isActive ? "active" : ""}
+          >
+            Leistungen
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/info" onClick={closeMenu}>Über uns</NavLink>
+          <NavLink 
+            to="/info" 
+            onClick={closeMenu}
+            className={({ isActive }) => isActive ? "active" : ""}
+          >
+            Über uns
+          </NavLink>
         </li>
         <li>
-          <a href="tel:+4915227760952" className="contact-btn" onClick={closeMenu}>
-            📞 +49 1522 7760952
+          <a 
+            href="tel:+4915227760952" 
+            className="contact-btn" 
+            onClick={closeMenu}
+          >
+            📞 Kontakt
           </a>
         </li>
       </ul>

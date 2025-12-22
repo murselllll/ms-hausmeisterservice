@@ -8,9 +8,9 @@ export default function Info() {
       <div style={{
         position: 'relative',
         width: '100%',
-        height: '60vh',
-        minHeight: '400px',
-        marginTop: '80px',
+        height: '70vh',
+        minHeight: '450px',
+        marginTop: '0',
         overflow: 'hidden'
       }}>
         <div style={{

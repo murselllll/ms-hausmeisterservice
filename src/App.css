@@ -44,7 +44,7 @@ html {
   width: 100%;
   margin: 0;
   padding: 0;
-  padding-top: 70px; /* Platz für fixe Navbar */
+  /* KEIN padding-top mehr - Hero geht bis ganz oben */
 }
 
 /* ========== HERO SECTION ========== */
@@ -58,6 +58,8 @@ html {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  /* Hero startet ganz oben, unter der transparenten Navbar */
+  margin-top: 0;
 }
 
 .home-hero::before {
@@ -130,6 +132,7 @@ html {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* ========== HERO BUTTONS ========== */
@@ -483,10 +486,6 @@ html {
 
 /* ========== RESPONSIVE - TABLET ========== */
 @media (max-width: 1024px) {
-  .content {
-    padding-top: 65px;
-  }
-
   .service-grid,
   .features-grid {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
@@ -496,10 +495,6 @@ html {
 
 /* ========== RESPONSIVE - MOBILE ========== */
 @media (max-width: 768px) {
-  .content {
-    padding-top: 60px;
-  }
-
   .home-hero {
     min-height: 600px;
     height: auto;
@@ -562,10 +557,6 @@ html {
 
 /* ========== RESPONSIVE - SMALL MOBILE ========== */
 @media (max-width: 480px) {
-  .content {
-    padding-top: 55px;
-  }
-
   .home-hero {
     min-height: 550px;
   }
@@ -601,5 +592,16 @@ html {
   .btn {
     font-size: 0.95rem;
     padding: 0.85rem 1.5rem;
+  }
+}
+
+/* ========== EXTRA SMALL DEVICES ========== */
+@media (max-width: 360px) {
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
   }
 }
