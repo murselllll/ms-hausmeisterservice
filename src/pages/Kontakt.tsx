@@ -301,7 +301,7 @@ export default function Kontakt() {
           </motion.div>
         </div>
 
-        {/* Google Maps Section */}
+        {/* Google Maps Section mit 50km Servicegebiet */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -314,33 +314,107 @@ export default function Kontakt() {
         >
           <h2 style={{ 
             fontSize: '2rem',
-            marginBottom: '1.5rem',
+            marginBottom: '1rem',
             color: 'var(--text-dark)',
             textAlign: 'center'
           }}>
             Unser Servicegebiet
           </h2>
-          <p style={{ 
-            fontSize: '1.1rem',
-            color: 'var(--text-gray)',
-            textAlign: 'center',
+          <div style={{
+            background: 'linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(249, 115, 22, 0.1))',
+            padding: '2rem',
+            borderRadius: '16px',
             marginBottom: '2rem',
-            lineHeight: '1.7'
+            textAlign: 'center'
           }}>
-            Wir betreuen Immobilien im Umkreis von 50 km um Kupferzell
-          </p>
-          <div className="map-container">
+            <p style={{ 
+              fontSize: '1.2rem',
+              color: 'var(--text-dark)',
+              marginBottom: '1rem',
+              fontWeight: 600
+            }}>
+              🎯 50 km Radius um Kupferzell
+            </p>
+            <p style={{ 
+              fontSize: '1rem',
+              color: 'var(--text-gray)',
+              lineHeight: '1.7',
+              maxWidth: '800px',
+              margin: '0 auto'
+            }}>
+              Wir betreuen Ihre Immobilien professionell im gesamten Umkreis von 50 km 
+              um Kupferzell. Das umfasst unter anderem die Regionen Heilbronn, Schwäbisch Hall, 
+              Crailsheim, Öhringen und viele weitere Orte in der Hohenlohe-Region.
+            </p>
+          </div>
+          <div className="map-container" style={{ position: 'relative' }}>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d162656.9883907!2d9.438!3d49.258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4797c4e5e5e5e5e5%3A0x0!2sKupferzell!5e0!3m2!1sde!2sde!4v1234567890!5m2!1sde!2sde&z=9"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81328.49419035!2d9.660!3d49.258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4797bfe3d7c8e8b9%3A0x41f6bb7a5df3e30!2s74635%20Kupferzell!5e0!3m2!1sde!2sde!4v1234567890!5m2!1sde!2sde&z=10"
               width="100%"
               height="450"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Servicegebiet Kupferzell"
+              title="Servicegebiet 50km um Kupferzell"
             />
+            {/* Overlay-Hinweis für den 50km Radius */}
+            <div style={{
+              position: 'absolute',
+              bottom: '20px',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              background: 'rgba(37, 99, 235, 0.95)',
+              color: 'white',
+              padding: '0.8rem 1.5rem',
+              borderRadius: '30px',
+              fontSize: '0.9rem',
+              fontWeight: 600,
+              boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              zIndex: 10,
+              pointerEvents: 'none'
+            }}>
+              <span style={{ fontSize: '1.2rem' }}>📍</span>
+              50 km Serviceradius um Kupferzell
+            </div>
           </div>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+            gap: '1.5rem',
+            marginTop: '2rem',
+            padding: '0 1rem'
+          }}>
+            {[
+              'Heilbronn', 'Schwäbisch Hall', 'Crailsheim', 'Öhringen', 
+              'Bad Mergentheim', 'Künzelsau', 'Ellwangen', 'Neckarsulm'
+            ].map((city, index) => (
+              <div key={index} style={{
+                background: 'var(--bg-light)',
+                padding: '1rem',
+                borderRadius: '10px',
+                textAlign: 'center',
+                fontSize: '0.95rem',
+                color: 'var(--text-dark)',
+                fontWeight: 500
+              }}>
+                ✓ {city}
+              </div>
+            ))}
+          </div>
+          <p style={{
+            textAlign: 'center',
+            marginTop: '2rem',
+            fontSize: '0.95rem',
+            color: 'var(--text-gray)',
+            fontStyle: 'italic'
+          }}>
+            Ihr Ort ist nicht dabei? Kontaktieren Sie uns – wir prüfen gerne, 
+            ob Ihr Standort in unserem Servicegebiet liegt!
+          </p>
         </motion.div>
 
         {/* Additional Info */}
