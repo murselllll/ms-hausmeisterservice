@@ -71,7 +71,7 @@ export default function Impressum() {
               color: 'var(--text-gray)',
               margin: 0
             }}>
-              Telefon: <a href="tel:+4915227760952" style={{ color: '#2563eb', textDecoration: 'none' }}>+49 152 27760952</a><br />
+              Telefon: <a href="tel:+4915161598654" style={{ color: '#2563eb', textDecoration: 'none' }}>+49 151 61598654</a><br />
               E-Mail: <a href="mailto:kontakt@msgebaeudeservice.com" style={{ color: '#2563eb', textDecoration: 'none' }}>kontakt@msgebaeudeservice.com</a>
             </p>
           </div>

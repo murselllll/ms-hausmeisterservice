@@ -88,7 +88,7 @@ export default function Navbar() {
         </li>
         <li>
           <a 
-            href="tel:+4915227760952" 
+            href="tel:+4915161598654" 
             className="contact-btn" 
             onClick={closeMenu}
           >

@@ -209,7 +209,7 @@ export default function Datenschutz() {
             MS Gebäudeservice<br />
             Servicegebiet: 50 km um Kupferzell<br />
             Baden-Württemberg<br /><br />
-            Telefon: <a href="tel:+4915227760952" style={{ color: '#2563eb', textDecoration: 'none' }}>+49 152 27760952</a><br />
+            Telefon: <a href="tel:+4915161598654" style={{ color: '#2563eb', textDecoration: 'none' }}>+49 151 61598654</a><br />
             E-Mail: <a href="mailto:kontakt@msgebaeudeservice.com" style={{ color: '#2563eb', textDecoration: 'none' }}>kontakt@msgebaeudeservice.com</a>
           </p>
 
@@ -395,7 +395,7 @@ export default function Datenschutz() {
             marginTop: '1rem'
           }}>
             E-Mail: <a href="mailto:kontakt@msgebaeudeservice.com" style={{ color: '#2563eb', textDecoration: 'none' }}>kontakt@msgebaeudeservice.com</a><br />
-            Telefon: <a href="tel:+4915227760952" style={{ color: '#2563eb', textDecoration: 'none' }}>+49 152 27760952</a>
+            Telefon: <a href="tel:+4915161598654" style={{ color: '#2563eb', textDecoration: 'none' }}>+49 151 61598654</a>
           </p>
         </motion.div>
 

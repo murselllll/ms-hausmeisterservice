@@ -264,7 +264,7 @@ export default function Info() {
               margin: '0 auto 2rem'
             }}>
               Lernen Sie uns kennen und überzeugen Sie sich selbst von unserem Service. 
-              Rufen Sie uns an unter <strong>+49 152 27760952</strong> oder kontaktieren 
+              Rufen Sie uns an unter <strong>+49 151 61598654</strong> oder kontaktieren 
               Sie uns über unser Kontaktformular.
             </p>
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>

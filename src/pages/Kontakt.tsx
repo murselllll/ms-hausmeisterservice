@@ -127,7 +127,7 @@ export default function Kontakt() {
                     fontWeight: 600
                   }}>
                     <a 
-                      href="tel:+4915227760952" 
+                      href="tel:+4915161598654" 
                       style={{ 
                         color: 'white',
                         textDecoration: 'none',
@@ -135,7 +135,7 @@ export default function Kontakt() {
                         paddingBottom: '2px'
                       }}
                     >
-                      +49 152 27760952
+                      +49 151 61598654
                     </a>
                   </p>
                 </div>
@@ -449,7 +449,7 @@ export default function Kontakt() {
             lineHeight: '1.7'
           }}>
             Wir antworten in der Regel innerhalb von 24 Stunden auf Ihre Anfrage. 
-            Bei dringenden Anliegen erreichen Sie uns jederzeit unter <strong>+49 152 27760952</strong>.
+            Bei dringenden Anliegen erreichen Sie uns jederzeit unter <strong>+49 151 61598654</strong>.
           </p>
         </motion.div>
       </section>

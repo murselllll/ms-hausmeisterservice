@@ -24,7 +24,7 @@ export default function Footer() {
               📷
             </a>
             <a 
-              href="tel:+4915227760952" 
+              href="tel:+4915161598654" 
               aria-label="Telefon"
               title="Rufen Sie uns an"
             >
@@ -56,7 +56,7 @@ export default function Footer() {
             MS Gebäudeservice<br />
             Servicegebiet: 50 km um Kupferzell<br />
             Baden-Württemberg<br /><br />
-            Tel: <a href="tel:+4915227760952">+49 152 27760952</a><br />
+            Tel: <a href="tel:+4915161598654">+49 151 61598654</a><br />
             E-Mail: <a href="mailto:kontakt@msgebaeudeservice.com">
               kontakt@msgebaeudeservice.com
             </a>
