@@ -242,6 +242,7 @@ export default function Kontakt() {
                   required
                   placeholder="Max Mustermann"
                   aria-label="Ihr Name"
+                  style={{ color: '#000000' }}
                 />
               </div>
 
@@ -256,6 +257,7 @@ export default function Kontakt() {
                   required
                   placeholder="max@beispiel.de"
                   aria-label="Ihre E-Mail"
+                  style={{ color: '#000000' }}
                 />
               </div>
 
@@ -269,6 +271,7 @@ export default function Kontakt() {
                   onChange={handleChange}
                   placeholder="+49 123 456 7890"
                   aria-label="Ihre Telefonnummer"
+                  style={{ color: '#000000' }}
                 />
               </div>
 
@@ -282,6 +285,7 @@ export default function Kontakt() {
                   required
                   placeholder="Beschreiben Sie kurz Ihr Anliegen..."
                   aria-label="Ihre Nachricht"
+                  style={{ color: '#000000' }}
                 />
               </div>
 
@@ -390,7 +394,7 @@ export default function Kontakt() {
           }}>
             {[
               'Heilbronn', 'Schwäbisch Hall', 'Crailsheim', 'Öhringen', 
-              'Bad Mergentheim', 'Künzelsau', 'Ellwangen', 'Neckarsulm'
+              'Bad Mergentheim', 'Künzelsau', 'Niedernhall', 'Neckarsulm'
             ].map((city, index) => (
               <div key={index} style={{
                 background: 'var(--bg-light)',
